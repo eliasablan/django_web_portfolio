@@ -1,0 +1,18 @@
+{% load static %}
+<!-- <div class="col-4">
+    <span class="image fit">
+        <img src="http://localhost:8000/media/{{foto.imagen_450}}" alt="" />
+    </span>
+</div> -->
+
+<article class="">
+    <span class="image">
+        <img src="{{foto.imagen_450.url}}" alt="{{foto.slug}}" />
+    </span>
+    <!-- <a href="{{foto.imagen.url}}"> -->
+    <a href="javascript:pswpInit({{ forloop.counter0 }});">
+        <div class="content">
+            <h2>{{foto.titulo}}</h2>
+        </div>
+    </a>
+</article>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block head_content %}
+    <title>Default Home Title</title>
+  {% endblock %}
+
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+  <noscript><link rel="stylesheet" href="{% static 'css/noscript.css' %}" /></noscript>
+  <link rel="icon" type="image/png"  href="{% static 'img/favicon.ico' %}" />
+</head>
+
+<body class="is-preload">
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+      <div class="inner" style="display:flex;justify-content:center;padding-bottom:5em;">
+  
+        <!-- Logo -->
+        <a href="{% url 'portafolio:home' %}" class="logo">
+          <span class="symbol"><img src="{% static 'img/logo.png' %}" alt="" /></span>
+          <!-- <span class="title">María Gabriela Arráez</span> -->
+        </a>
+  
+        <!-- Nav -->
+        <nav style="z-index: 5">
+          <ul>
+            <li><a href="#menu">Menu</a></li>
+          </ul>
+        </nav>
+  
+      </div>
+    </header>
+  
+    <!-- Menu -->
+    {% include 'principal/menu.html' %}    
+    
+    <!-- Main -->
+    <div id="main">
+      {% block body_content %}
+      {% endblock %}
+    </div>
+
+
+  <!-- Footer -->
+  {% include 'principal/pie.html' %}    
+  
+</div>
+  
+  <!-- Scripts -->
+  {% block page_script %}
+  {% endblock %}
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/browser.min.js' %}"></script>
+  <script src="{% static 'js/breakpoints.min.js' %}"></script>
+  <script src="{% static 'js/util.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

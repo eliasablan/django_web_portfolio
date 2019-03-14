@@ -1,0 +1,13 @@
+{% load static %}
+<!-- <article class="style1"> -->
+<article class="">
+    <span class="image">
+        <img src="{{album.foto_destacada.url}}" alt="" />
+    </span>
+    <a href="{% url 'portafolio:album' album.slug %}">
+        <div class="content">
+            <h2>{{album.nombre}}</h2>
+            <!-- <p>{{album.descripcion}}</p> -->
+        </div>
+    </a>
+</article>

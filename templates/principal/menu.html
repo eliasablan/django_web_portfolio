@@ -1,0 +1,10 @@
+{% load static %}
+<nav id="menu">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="{% url 'portafolio:home' %}">Home</a></li>
+      {% for album in albumes %}
+        <li><a href="{% url 'portafolio:album' album.slug %}">{{album.nombre}}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
