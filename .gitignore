@@ -85,12 +85,12 @@ celerybeat-schedule
 *.sage.py
 
 # Environments
-.env
+# .env
 .venv
-env/
+# env/
 venv/
-ENV/
-env.bak/
+# ENV/
+# env.bak/
 venv.bak/
 
 # Spyder project settings
@@ -114,3 +114,7 @@ __pycache__/
 local_settings.py
 db.sqlite3
 media
+
+# CUSTOM Elias
+Procfile
+runtime.txt
