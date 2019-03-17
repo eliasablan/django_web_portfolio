@@ -85,7 +85,7 @@ celerybeat-schedule
 *.sage.py
 
 # Environments
-.env
+# .env
 .venv
 env/
 venv/
@@ -106,7 +106,7 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-### Django ###
+# Django
 *.log
 *.pot
 *.pyc
@@ -114,3 +114,8 @@ __pycache__/
 local_settings.py
 db.sqlite3
 media
+
+
+# CUSTOM por Elias
+Procfile
+runtime.txt

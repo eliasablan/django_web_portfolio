@@ -6,17 +6,17 @@ BASE_DIR = os.path.dirname(
             os.path.dirname(
             os.path.abspath(__file__)
             )))
-print("base dir path", BASE_DIR)
+# print("base dir path", BASE_DIR)
 
-PROJECT_ROOT = os.path.dirname(
-            os.path.dirname(
-            os.path.abspath(__file__)
-            ))
-print("project root", PROJECT_ROOT)
+# PROJECT_ROOT = os.path.dirname(
+#             os.path.dirname(
+#             os.path.abspath(__file__)
+#             ))
+# print("project root", PROJECT_ROOT)
 
 SECRET_KEY = config('SECRET_KEY')
 
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = config('DEBUG', default=True, cast=bool)
 
 INSTALLED_APPS = [
     'django.contrib.admin', 
@@ -29,9 +29,12 @@ INSTALLED_APPS = [
     'imagekit',
 
     'portafolio',
+
+    # PRUEBA PythonAnywhere
+    'debug_toolbar'
 ]
 
-SITE_ID = 1
+# SITE_ID = 1
 
 ROOT_URLCONF = 'src.urls'
 
@@ -57,7 +60,7 @@ WSGI_APPLICATION = 'src.wsgi.application'
 
 LANGUAGE_CODE = 'es'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Madrid'
 
 USE_I18N = True
 
@@ -80,7 +83,7 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # CACHES = {
 #     'default': {
